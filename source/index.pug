@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap")
+        title Testing
+        link(rel="icon" href="img/icon.ico" sizes="32x32")
+        link(rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css")
+        link(rel="stylesheet", href="./css/style.css")
+        link(rel="stylesheet", href="./css/media.css")
+        link(rel="stylesheet", href="https://unpkg.com/aos@2.3.1/dist/aos.css")
+        
+    body
+        header#header.header
+            .container
+                .header-row(data-aos="fade-down")
+                    .header-row__logo
+                        a(href="#")
+                            img.logo-image(src="./img/logo.svg", alt="logo")
+                            span.logo-text
+                                |Testing
+                    nav.header-row__navigation
+                        ul.navigation-menu
+                            li.navigation-menu__item
+                                a(href="#").item-link.item-link__animation
+                                    |Home
+                            li.navigation-menu__item
+                                a(href="#partners").item-link.item-link__animation
+                                    |Our Partners
+                            li.navigation-menu__item
+                                a(href="#team").item-link.item-link__animation
+                                    |Our Team
+                            li.navigation-menu__item
+                                a(href="#contactus").item-link.item-link__animation
+                                    |Contact Us
+
+                    .header-row__social
+                        .social-block
+                            a(href="#" target="_blank").social-block__link
+                                img.social-block__link-image(src="img/facebook.svg")
+                            a(href="#" target="_blank").social-block__link
+                                img.social-block__link-image(src="img/twitter.svg")
+                            a(href="#" target="_blank").social-block__link
+                                img.social-block__link-image(src="img/linkedin.svg")
+                            a(href="#" target="_blank").social-block__link
+                                img.social-block__link-image(src="img/instagram.svg")
+                        .social-privacy
+                            a(href="#" target="_blank")
+                                |Privacy Policy
+                .header-row__menu
+                    span
+                    span
+                    span
+        main 
+            section#banner.banner
+                .banner-block
+                    .container
+                        .banner-row
+                            .banner-description(data-aos="zoom-in")
+                                .banner-title
+                                    h1.title__text
+                                        |Email marceting for fast-growing startups
+                                .banner-description__block
+                                    p.description__text
+                                        |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id ut cursus dictum purus enim in in urna, suspendisse. Mauris, mollis sed sed ac.
+                                .banner-buttons
+                                    button.button-start-now
+                                        |Start Now
+                                    button.button-read-more
+                                        |Read More
+                        .decor-circle-border
+
+                img(src="img/decor-line.svg" class="decor-line1" data-aos="fade-right" data-aos-duration="2000")
+                img(src="img/decor-line2.svg" class="decor-line2" data-aos="fade-left" data-aos-duration="2000")
+                .decor-circle
+                img(src="img/close.svg").decor-close
+                img(src="img/close-border.svg").decor-close-border
+                
+                        
+            section#partners.partners
+                .container
+                    .partners-row
+                        .partners-title
+                            h2.partners-title__text(data-aos="fade-right" data-aos-duration="1000")
+                                |Our Partners
+                    .partners-row
+                        .partners-tabs
+                            .partners-tabs-header(data-aos="fade-right" data-aos-duration="1500")
+                                .tabcontent.active#tom(style="display: block;")
+                                    .tabcontent__header
+                                        .tab-title
+                                            .tab-title__image
+                                                img(src="img/tom-dou.png" alt="Tom Dou")
+                                            .tab-title__header
+                                                h4.tab-title__header-author
+                                                    |Tom Dou
+                                                p.tab-title__header-position
+                                                    |Front-End
+
+                                        .tab-description
+                                            p.tab-description__text
+                                                |“Lorem ipsum dolor sit amet, consectetur adipiscing elit. At pretium id viverra interdum nam odio ultricies. Diam leo, sed neque dui pulvinar condimentum pretium. At pretium id viverra interdum nam odio ultricies. Diam leo, sed neque dui pulvinar condimentum pretium.”
+                                .tabcontent#tessa
+                                    .tabcontent__header
+                                        .tab-title
+                                            .tab-title__image
+                                                img(src="img/tom-dou.png" alt="Tom Dou")
+                                            .tab-title__header
+                                                h4.tab-title__header-author
+                                                    |Tessa Hall
+                                                p.tab-title__header-position
+                                                    |Support specialist
+                                        .tab-description
+                                            p.tab-description__text
+                                                |“Diam leo, sed neque dui pulvinar condimentum pretium. At pretium id viverra interdum nam odio ultricies. Diam leo, sed neque dui pulvinar condimentum pretium.”
+                                .tabcontent#eli
+                                    .tabcontent__header
+                                        .tab-title
+                                            .tab-title__image
+                                                img(src="img/tom-dou.png" alt="Tom Dou")
+                                            .tab-title__header
+                                                h4.tab-title__header-author
+                                                    |Eli Blackburn
+                                                p.tab-title__header-position
+                                                    |Quality assurance tester
+
+                                        .tab-description
+                                            p.tab-description__text
+                                                |“Diam leo, sed neque dui pulvinar condimentum pretium. At pretium id viverra interdum nam odio ultricies. Diam leo, sed neque dui pulvinar condimentum pretium.”
+                                .tabcontent#virginia
+                                    .tabcontent__header
+                                        .tab-title
+                                            .tab-title__image
+                                                img(src="img/tom-dou.png" alt="Tom Dou")
+                                            .tab-title__header
+                                                h4.tab-title__header-author
+                                                    |Virginia Combs
+                                                p.tab-title__header-position
+                                                    |Web developer
+                                        .tab-description
+                                            p.tab-description__text
+                                                |“Diam leo, sed neque dui pulvinar condimentum pretium. At pretium id viverra interdum nam odio ultricies. Diam leo, sed neque dui pulvinar condimentum pretium.”
+                                .tabcontent#anna
+                                    .tabcontent__header
+                                        .tab-title
+                                            .tab-title__image
+                                                img(src="img/tom-dou.png" alt="Tom Dou")
+                                            .tab-title__header
+                                                h4.tab-title__header-author
+                                                    |Anna Campbell
+                                                p.tab-title__header-position
+                                                    |IT security specialist
+
+                                        .tab-description
+                                            p.tab-description__text
+                                                |“Diam leo, sed neque dui pulvinar condimentum pretium. At pretium id viverra interdum nam odio ultricies. Diam leo, sed neque dui pulvinar condimentum pretium.”
+                                .tabcontent#aracely
+                                    .tabcontent__header
+                                        .tab-title
+                                            .tab-title__image
+                                                img(src="img/tom-dou.png" alt="Tom Dou")
+                                            .tab-title__header
+                                                h4.tab-title__header-author
+                                                    |Aracely Holmes
+                                                p.tab-title__header-position
+                                                    |Computer programmer
+
+                                        .tab-description
+                                            p.tab-description__text
+                                                |“Diam leo, sed neque dui pulvinar condimentum pretium. At pretium id viverra interdum nam odio ultricies. Diam leo, sed neque dui pulvinar condimentum pretium.”
+                            .partners-tabs-buttons(data-aos="fade-left" data-aos-duration="1500")
+                                .tablink.active#tom
+                                    img(src="img/tab-link1.svg" class="tablink-image")
+                                .tablink#tessa
+                                    img(src="img/tab-link2.svg" class="tablink-image")
+                                .tablink#eli
+                                    img(src="img/tab-link3.svg" class="tablink-image")
+                                .tablink#virginia
+                                    img(src="img/tab-link4.svg" class="tablink-image")
+                                .tablink#anna
+                                    img(src="img/tab-link5.svg" class="tablink-image")
+                                .tablink#aracely
+                                    img(src="img/tab-link6.svg" class="tablink-image")
+            section#team.team
+                .container
+                    .team-block
+                        .team-row
+                            .team-title
+                                h2.team-title__text(data-aos="fade-right" data-aos-duration="1000")
+                                    |Our Team
+                        .team-row
+                            //- p
+                            //-     |dfgdfgdfg
+                            .team-gallery
+                                .team-gallery__description(data-aos="fade-right" data-aos-duration="1500")
+                                    .description-title
+                                        h4.description-title__header
+                                            |About
+                                    .description-text
+                                        p.description-text__item
+                                            |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nullam ac sed eget. Dui in eget a tristique. Curabitur massa nec non egestas nisl. Fusce nullam ac sed eget. Dui in eget a tristique.    
+                                    
+                                .team-gallery__content(data-aos="fade-left" data-aos-duration="1200")
+                                    .content-tabs
+                                        .content-tabs__block
+                                            label.content-tabs__item
+                                                input(id="radio" type="radio" checked="checked" name="radio")
+                                                span.checkmark
+                                                |Team 1
+                                            label.content-tabs__item
+                                                input(id="radio" type="radio" name="radio")
+                                                span.checkmark
+                                                |Team 2
+                                            label.content-tabs__item
+                                                input(id="radio" type="radio" name="radio")
+                                                span.checkmark
+                                                |Team 3
+                                    .content-swiper
+                                        .swiper
+                                            .swiper-wrapper
+                                                .swiper-slide
+                                                    //- p
+                                                    //-     |dfgdfg
+                                                    .swiper-slide__item
+                                                        img(src="img/swiper-slide1.png")
+                                                        .swiper-slide__description
+                                                            .description                                                        
+                                                                .description-author
+                                                                    h5
+                                                                        |Tom Dou
+                                                                .description-position
+                                                                    p
+                                                                        |Front-End
+                                                                .description-button
+                                                                    a(href="" data-rel="slide-1").open-popup
+                                                                        |Read More
+
+                                                            
+                                                .swiper-slide
+                                                    .swiper-slide__item
+                                                        img(src="img/swiper-slide2.png")
+                                                        .swiper-slide__description
+                                                            .description
+                                                                .description-author
+                                                                    h5
+                                                                        |Tom Dou
+                                                                .description-position
+                                                                    p
+                                                                        |Front-End
+                                                                .description-button
+                                                                    a(href="" data-rel="slide-2").open-popup
+                                                                        |Read More
+                                                .swiper-slide
+                                                    .swiper-slide__item
+                                                        img(src="img/swiper-slide3.png")
+                                                        .swiper-slide__description
+                                                            .description
+                                                                .description-author
+                                                                    h5
+                                                                        |Tom Dou
+                                                                .description-position
+                                                                    p
+                                                                        |Front-End
+                                                                .description-button
+                                                                    a(href="" data-rel="slide-1").open-popup
+                                                                        |Read More
+                                                .swiper-slide
+                                                    .swiper-slide__item
+                                                        img(src="img/swiper-slide4.png")
+                                                        .swiper-slide__description
+                                                            .description
+                                                                .description-author
+                                                                    h5
+                                                                        |Tom Dou
+                                                                .description-position
+                                                                    p
+                                                                        |Front-End
+                                                                .description-button
+                                                                    a(href="" data-rel="slide-1").open-popup
+                                                                        |Read More
+                                        .swiper-navigation
+                                            .swiper-scrollbar
+                                            .swiper-buttons
+                                                .swiper-button-prev
+                                                    i
+                                                .swiper-button-next
+                                                    i
+                                                //- .swiper-button
+
+
+                img(src="img/close-border.svg").decor-close-border
+                img(src="img/close-border.svg").decor-close-border.decor-close-border2
+            section#contactus.contactus
+                .container
+                    .contactus-row
+                        .contactus-title
+                            h2.contactus-title__text(data-aos="fade-right" data-aos-duration="1000")
+                                |Contact Us
+                    .contactus-row
+                        .contactus-form(data-aos="zoom-in" data-aos-duration="2000")
+                            form(action="")
+                                input(type="text" placeholder="Your Name").input
+                                input(type="email" placeholder="Email Address").input
+                                input(type="tel" placeholder="Phone Number").input
+                                input(placeholder="Choose your job type").input
+                                textarea(placeholder="Message").textarea
+                                .input-buttons
+                                    .file-input
+                                        input(type="file" name="file-input" id="file-input" class="file-input__input")
+                                        .label(class="file-input__label" for="file-input")
+                                            img(src="img/upload.svg")
+                                            span
+                                                |Upload your CV
+                                    .button-submit
+                                        button(type="submit")
+                                            |Submit
+                                        //- input(type="submit" value="Submit")
+                        
+                img(src="img/decor-contact-down.svg" data-aos="fade-right" data-aos-duration="1000").contactus-decor-down
+                img(src="img/decor-contact-right.svg" data-aos="fade-left" data-aos-duration="1000").contactus-decor-right
+        footer.footer
+            .container
+                .footer-row
+                    .footer-title
+                        h2.footer-title__text(data-aos="fade-right" data-aos-duration="1000")
+                            |Where You Can Find Us?
+                .footer-row
+                    .footer-row__sociales
+                        .sociales-block(data-aos="fade-right" data-aos-duration="800")
+                            .sociales-block__header
+                                h5
+                                    |Office 1
+                            .sociales-block__links
+                                .link-item
+                                    img(src="img/map-link.svg")
+                                    a(href="#")
+                                        |Lasnamae linnaosa, Pae tn 25-47
+                                .link-item
+                                    img(src="img/email-link.svg")
+                                    a(href="mailto:username@mail.com")
+                                        |username@mail.com
+                                .link-item
+                                    img(src="img/phone-link.svg")
+                                    a(href="tel:+3125789075")
+                                        |+3125789075
+                        .sociales-block(data-aos="fade-right" data-aos-duration="1200")
+                            .sociales-block__header
+                                h5
+                                    |Office 2
+                            .sociales-block__links
+                                .link-item
+                                    img(src="img/map-link.svg")
+                                    a(href="#" target="_blank")
+                                        |Lasnamae linnaosa, Pae tn 25-47
+                                .link-item
+                                    img(src="img/email-link.svg")
+                                    a(href="mailto:username@mail.com" target="_blank") 
+                                        |username@mail.com
+                                .link-item
+                                    img(src="img/phone-link.svg")
+                                    a(href="tel:+3125789075" target="_blank")
+                                        |+3125789075
+                        .sociales-block(data-aos="fade-right" data-aos-duration="1400")
+                            .sociales-block__header
+                                h5
+                                    |Socials
+                            .sociales-block__links
+                                .link-item__social
+                                    a(href="#" target="_blank")
+                                        img(src="img/popup-facebook.svg")
+                                    a(href="#" target="_blank")
+                                        img(src="img/popup-twiter.svg")
+                                    a(href="#" target="_blank")
+                                        img(src="img/popup-linkedin.svg")
+                                    a(href="#" target="_blank")
+                                        img(src="img/popup-instagram.svg")
+                                .link-item__privacy
+                                    a(href="#" target="_blank")
+                                        |Privacy Policy
+
+            img(src="img/footer-decor.svg" data-aos="fade-left" data-aos-duration="1000").footer-decor          
+
+        .popup-wrapper
+            .bg-layer
+            .popup-content(data-rel='slide-1')
+                .layer-close
+                .popup-container
+                    .popup-align
+                        .simple-item
+                            .simple-item__header
+                                .simple-image(data-aos="zoom-in" data-aos-duration="1000")
+                                    img(src="img/popup-image1.png")
+                                .simple-header(data-aos="zoom-in" data-aos-duration="1000")
+                                    .simple-header__name
+                                        p
+                                            |Name:
+                                        span
+                                            |Tom Dou
+                                    .simple-header__name
+                                        p
+                                            |Position:
+                                        span
+                                            |Front-End
+                                    .simple-header__name
+                                        p
+                                            |Phone:
+                                        span
+                                            |+3125789075
+                                    .simple-header__name
+                                        p
+                                            |Email:
+                                        span
+                                            |username@mail.com
+                                    .simple-header__name
+                                        //- p
+                                        //-     |Email:
+                                        //- span
+                                        //-     |username@mail.com
+                                        .simple-links
+                                            a(href="#" target="_blank")
+                                                img(src="img/popup-facebook.svg")
+                                            a(href="#" target="_blank")
+                                                img(src="img/popup-instagram.svg")
+                                            a(href="#" target="_blank")
+                                                img(src="img/popup-linkedin.svg")
+                                            a(href="#" target="_blank")
+                                                img(src="img/popup-twiter.svg")
+                                            
+                            .simple-item__description(data-aos="zoom-in" data-aos-duration="1000")
+                                p
+                                    |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nullam ac sed eget. Dui in eget a tristique. Curabitur massa nec non egestas nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui in eget a tristique. Curabitur massa nec non egestas nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            
+                    .btn-close.close-popup
+                        span
+            .popup-content(data-rel='slide-2')
+                .layer-close
+                .popup-container
+                    .popup-align
+                        .simple-item
+                            .simple-item__header
+                                .simple-image(data-aos="zoom-in" data-aos-duration="1000")
+                                    img(src="img/popup-image1.png")
+                                .simple-header(data-aos="zoom-in" data-aos-duration="1000")
+                                    .simple-header__name
+                                        p
+                                            |Name:
+                                        span
+                                            |Djesika Kaster
+                                    .simple-header__name
+                                        p
+                                            |Position:
+                                        span
+                                            |Front-End
+                                    .simple-header__name
+                                        p
+                                            |Phone:
+                                        span
+                                            |+3125789075
+                                    .simple-header__name
+                                        p
+                                            |Email:
+                                        span
+                                            |username@mail.com
+                                    .simple-header__name
+                                        .simple-links
+                                            a(href="#" target="_blank")
+                                                img(src="img/popup-facebook.svg")
+                                            a(href="#" target="_blank")
+                                                img(src="img/popup-instagram.svg")
+                                            a(href="#" target="_blank")
+                                                img(src="img/popup-linkedin.svg")
+                                            a(href="#" target="_blank")
+                                                img(src="img/popup-twiter.svg")
+                                            
+                            .simple-item__description(data-aos="zoom-in" data-aos-duration="1000")
+                                p
+                                    |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nullam ac sed eget. Dui in eget a tristique. Curabitur massa nec non egestas nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui in eget a tristique. Curabitur massa nec non egestas nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            
+                    .btn-close.close-popup
+                        span
+
+
+
+
+
+                                
+
+
+
+                
+        script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
+        script(src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous")
+        script(src="https://unpkg.com/swiper@8/swiper-bundle.min.js")
+        script(src="./js/main.js")

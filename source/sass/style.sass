@@ -1,0 +1,1229 @@
+@import 'vars'
+
+*
+    box-sizing: border-box
+html
+    scroll-behavior: smooth
+    ::-webkit-scrollbar 
+        width: 10px
+    ::-webkit-scrollbar-track 
+        background: $background_banner
+    ::-webkit-scrollbar-thumb
+        background: $brand_color
+        border-radius: 10px
+
+
+
+body
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: $ubuntu
+
+.fixed
+    overflow-y: hidden
+
+
+a
+    text-decoration: none
+
+.container
+    max-width: 1780px
+    height: 100%
+    margin: auto
+    padding-left: 20px
+    padding-right: 20px
+
+.header
+    position: fixed
+    width: 100%
+    z-index: 21
+    display: block
+    
+    &-row
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding-top: 30px
+        padding-bottom: 30px
+        &__logo
+            a
+                display: flex
+                align-items: center
+                font-size: 36px
+                font-weight: $medium
+                color: #fff
+        
+        &__navigation
+
+            .navigation-menu
+                display: flex
+                flex-direction: row
+                padding: 0
+                margin: 0
+                &__item
+                    display: block
+                    margin-left: 30px
+                    &:first-child
+                        margin-left:0
+                    .item-link
+                        // text-decoration: none
+                        position: relative
+                        color: #fff
+                        font-size: 16px                        
+                        font-weight: $regular
+                        line-height: 18px
+                        text-transform: uppercase
+                        transition: all .4s ease-out
+                        &:before
+                            content:''
+                            position: absolute
+                            width: 100%
+                            height: 1px
+                            background-color: #fff
+                            top: 100%
+                            left: 0
+                            pointer-events: none
+                          
+                        
+                    .item-link__animation
+                        &:before
+                            transform-origin: 100% 50%
+                            transform: scale3d(0, 1, 1)
+                            transition: transform 0.5s
+                        &:hover
+                            &:before
+                                transform-origin: 0% 50%
+                                transform: scale3d(1, 1, 1)
+                        
+                            
+        &__social
+            // display: flex
+            display: none
+            .social-block
+                &__link
+                    margin: 10px
+                    &-image
+                        width: 30px
+                        height: 30px
+                        object-fit: contain
+            .social-privacy
+                margin-top: 25px
+                a
+                    color: #B1B1B1
+                    text-decoration: none
+                    font-size: 16px
+                    line-height: 18px
+                    font-weight: $light
+                    transition: 0.5s linear
+                    
+
+
+            
+    .header-row__menu
+        width: 24px
+        height: 30px
+        position: relative
+        z-index: 2
+        overflow: hidden
+        display: none
+        
+        span
+            display: block
+            height: 3px
+            width: 100%
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            background-color: #fff
+            transition: all 0.5s
+            border-radius: 1px 
+
+            &:nth-of-type(2)
+                top: calc(50% - 7px)
+            &:nth-of-type(3)
+                top: calc(50% + 7px)
+    .active_menu
+        transform: translateX(0)
+        height: 100%
+    .active
+        span
+            &:nth-of-type(1)
+                display: none
+            &:nth-of-type(2)
+                top: 50%
+                transform: translate(-50%, 0%) rotate(45deg)
+            &:nth-of-type(3)
+                top: 50%
+                transform: translate(-50%, 0%) rotate(-45deg)
+.active_header
+    background: linear-gradient(104.93deg, rgba(122, 122, 122, 0.19) 1.86%, rgba(122, 122, 122, 0) 104.73%)
+    filter: drop-shadow(0px 4px 4px rgba(50, 50, 50, 0.15))
+    backdrop-filter: blur(100px)
+    height: 100vh
+    transform: translateX(0)
+    transition: .2s linear
+.active_social
+    display: flex
+.banner
+    background-color: $background_banner
+    // height: calc(100vh - 115px)
+    height: 100vh
+    overflow: hidden
+    position: relative
+    z-index: 20
+    // mar
+    // overflow-y: hidden
+    // overflow: hidden
+    &-block
+        height: 100%
+        display: flex
+        justify-content: center
+        overflow: hidden
+    &-row
+        
+        height: 100%
+        display: flex
+        align-items: center
+        margin: auto
+        &:hover .banner-description
+            transform: translateZ(8px)
+        .banner-description
+            transition: transform 0.3s ease
+            display: flex
+            position: relative
+            z-index: 1
+            flex-direction: column
+            align-items: center
+            background: linear-gradient(104.93deg, rgba(122, 122, 122, 0.19) 1.86%, rgba(122, 122, 122, 0) 104.73%)
+            filter: drop-shadow(0px 4px 4px rgba(50, 50, 50, 0.15))
+            backdrop-filter: blur(100px)
+            border-radius: 7px
+            padding: 72px 46px
+            width: 1268px
+            .banner-title
+                margin-bottom: 40px
+                .title__text
+                    font-size: 72px
+                    font-weight: $bold
+                    line-height: 72px
+                    color: #fff
+                    text-align: center
+                    margin: 0
+            .banner-description__block
+                max-width: 742px
+                .description__text
+                    font-weight: 300
+                    font-size: 24px
+                    color: #fff
+                    text-align: center
+                    margin: 0
+            .banner-buttons
+                margin-top: 114px
+                button
+                    width: 284px
+                    height: 64px
+                    border-radius: 36px
+                    outline: none
+                    border: none
+                    background: none
+                    color: #fff
+                    font-size: 24px
+                    line-height: 28px
+                    font-weight: $regular
+                .button-start-now
+                    background-color: $brand_color
+                    transition: 0.5s linear
+                    &:hover
+                        background-color: #ed346c
+                        transition: 0.5s linear
+                        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1)
+
+                .button-read-more
+                    border: 1px solid #fff
+                    margin-left: 60px
+                    transition: 0.5s linear
+                    &:hover
+                        transition: 0.5s linear
+                        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1)
+                
+.decor-line1
+    position: absolute
+    top: 15%
+    left: 20px
+    width: 22vw
+    object-fit: contain
+    z-index: -1
+.decor-line2
+    position: absolute
+    bottom: 0
+    right: 20px
+    width: 30vw
+    object-fit: contain
+    z-index: -1
+.decor-circle
+    width: 256px
+    height: 256px
+    border-radius: 50%
+    background-color: $brand_color
+    position: absolute
+    content: ''
+    top: 8%
+    left: 20%
+    z-index: -1
+    animation-name: toptobottom
+    animation-duration: 5s
+    animation-direction: alternate
+    animation-iteration-count: infinite
+    animation-timing-function: linear
+.decor-close
+    position: absolute
+    z-index: -1
+    top: calc(50% - 115px)
+    // right: 32px
+    right: 60px
+    // top: 32px
+    height: 266px
+    width: 266px
+    // overflow: hidden
+    transform-origin: center center
+    
+    animation: spin 7s linear infinite
+    
+.decor-close-border
+    position: absolute
+    z-index: -1
+    left: 5%
+    height: 148px
+    width: 148px
+    bottom: 5%
+    transform-origin: center
+    animation: spin 6s linear infinite
+.decor-circle-border
+    width: 1021px
+    height: 1021px
+    border-radius: 100%
+    position: absolute
+    top: 80%
+    // bottom: -98%
+    border: 165px solid $brand_color
+    z-index: -1
+    left: 50%
+    transform: translateX(-50%)
+    animation-name: toptobottomborder
+    animation-duration: 4s
+    animation-direction: alternate
+    animation-iteration-count: infinite
+    animation-timing-function: linear
+
+@keyframes spin
+    100%
+        transform: rotate(360deg)
+        transform-origin: center center
+@keyframes toptobottom
+    // 0%
+    //     top: 8%
+    100%
+        top: 14%
+@keyframes toptobottomborder
+    100%
+        top: 70%
+        
+        
+
+.partners
+    overflow: hidden
+    // z-index: 20
+    width: 100%
+    background-color: #F8F8F8
+    // position: absolute
+    padding: 120px 0
+    .active
+        display: block
+    &-row        
+        .partners-title
+            &__text
+                margin: 0
+                font-weight: $bold
+                font-size: 54px
+                line-height: 62px
+                color: $title_color
+        .partners-tabs
+            margin-top: 50px
+            display: flex
+            &-header
+                max-width: 860px
+                margin-right: 20px
+                background-color: #fff
+                border: 1px solid #dedede
+                border-radius: 10px
+                padding: 30px
+                box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1)
+                // .active
+                // .tabcontent 
+                .tabcontent
+                    display: none
+                    animation: fadeEffect 1s
+                    &__header
+                        .tab-title
+                            display: flex
+                            &__image
+                                img
+                                    width: 70px
+                                    height: 70px
+                                    object-fit: contain
+                            &__header
+                                margin-left: 15px
+                                &-author
+                                    margin-top: 0
+                                    margin-bottom: 0
+                                    color: #000
+                                    font-size: 24px
+                                    line-height: 28px
+                                &-position
+                                    color: $profession_color
+                                    font-size: 20px
+                                    line-height: 23px
+                                    font-weight: $light
+                                    margin-bottom: 0
+                                    margin-top: 10px
+                        .tab-description
+                            margin-top: 30px
+                            &__text
+                                font-size: 20px
+                                line-height: 30px
+                                color: #3D3D3D
+                                font-weight: $light
+                                margin: 0
+            &-buttons
+                display: flex
+                flex-wrap: wrap
+                width: 100%
+                .active
+                    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2)                
+                .tablink
+                    // width: 280px
+                    flex: 0 0 calc(33.333% - 20px)
+                    height: 170px
+                    background-color: #fff
+                    border: 1px solid #dedede
+                    border-radius: 10px
+                    text-align: center
+                    // box-sizing: border-box
+                    margin-right: 20px
+                    transition: .5s linear
+                    &:hover
+                        transition: .5s linear
+                        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2)
+                    // margin-bottom: 20px
+                    // margin: 10px
+                    &:nth-child(1),&:nth-child(2),&:nth-child(3)
+                        margin-bottom: 20px
+                    &:nth-child(3)
+                        margin-right: 0
+                    &:nth-child(6)
+                        margin-right: 0
+                    &-image
+                        width: 80%
+                        height: 100%
+                        object-fit: contain
+
+@keyframes fadeEffect
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+.team
+    width: 100%
+    background-color: #fff
+    // position: absolute
+    padding: 120px 0
+    position: relative
+    overflow: hidden
+    &:before
+        content: ""
+        // display: block
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 0
+        left: 0
+        // z-index: -1
+        z-index: 2
+        right: 40%
+        // background: #000
+        // height: 100%
+        background: linear-gradient(90deg, #F8F8F8 0%, rgba(248, 248, 248, 0) 107.87%)
+    .container
+        max-width: 100%
+        padding: 0
+    .decor-close-border
+        z-index: 20
+        width: 148px
+        height: 148px
+        top: 5%
+        right: 10%
+        left: auto
+    .decor-close-border2
+        z-index: 20
+        bottom: 60px
+        left: 10%
+        top: auto
+
+        // margin-right: 0
+    .team-block        
+        position: relative
+        z-index: 20
+        overflow: hidden
+        .team-row
+            .team-title
+                max-width: 1780px
+                // max-width: 
+                margin: auto
+                padding-left: 20px
+                &__text
+                    margin: 0
+                    font-weight: $bold
+                    font-size: 54px
+                    line-height: 62px
+                    color: $title_color
+            .team-gallery
+                display: flex
+                max-width: 1780px
+                // max-width: 
+                margin: auto
+                padding-left: 20px
+                align-items: center
+                &__description
+                    min-width: 430px
+                    margin-right: 20px
+                    .description-title
+                        &__header
+                            font-size: 34px
+                            line-height: 40px
+                            font-weight: $medium
+                            color: $title_color
+                            margin: 0
+                    .description-text
+                        margin-top: 18px
+                        &__item                            
+                            font-weight: $light
+                            font-size: 24px
+                            line-height: 35px
+                            margin: 0
+                            color: #3d3d3d
+                &__content
+                    width: 100%
+                    .content-tabs
+                        display: flex
+                        margin-bottom: 70px
+                        // justify-content: center
+                        &__block
+                            background-color: #F0F0F0
+                            display: flex
+                            border-radius: 60px
+                            .content-tabs__item
+                                position: relative
+                                // padding-left: 35px
+                                padding: 20px 43px 20px 78px
+                                display: block
+
+                                cursor: pointer
+                                border-radius: 60px
+                                font-size: 24px
+                                line-height: 28px
+                                font-weight: $medium
+                                &:first-child
+                                    .checkmark
+                                        &:after
+                                            content: ""
+                                            position: absolute
+                                            display: block
+                                            top: 3px
+                                            left: 3px
+                                            width: 18px
+                                            height: 18px
+                                            border-radius: 50%
+                                            background: white
+                                input
+                                    position: absolute
+                                    opacity: 0
+                                    cursor: pointer
+                                    height: 0
+                                    width: 0
+
+                                    /* Create a custom radio button
+
+                                .checkmark
+                                    position: absolute
+                                    // top: 0
+                                    left: 30px
+                                    height: 30px
+                                    width: 30px
+                                    border: 3px solid #09121F                    
+                                    border-radius: 50%
+                    .content-swiper
+                        // overflow-y: hidden
+                        .swiper
+                            // width: 100%
+                            .swiper-wrapper
+                                .swiper-slide
+                                    width: 430px
+                                    &__item                                        
+                                        width: 100%
+                                        img
+                                            position: relative
+                                            overflow: hidden
+                                            display: block
+                                            height: auto
+                                            cursor: pointer
+                                            width: 100%  
+                                        .swiper-slide__description
+                                            position: absolute
+                                            left: 0
+                                            bottom: 0
+                                            cursor: pointer
+                                            width: 100%
+                                            height: 0
+                                            background-color: rgba(0, 0, 0, 0.5)
+                                            flex-direction: column
+                                            align-items: center
+                                            justify-content: flex-end
+                                            transition: 0.5s ease
+                                            border-radius: 5px
+                                            
+                                            .description
+                                                flex-direction: column
+                                                align-items: center
+                                                justify-content: flex-end
+                                                text-align: center
+                                                &-author
+                                                    margin-bottom: 10px
+                                                    h5
+                                                        font-size: 30px
+                                                        line-height: 35px
+                                                        font-weight: $medium
+                                                        color: #fff
+                                                        margin: 0
+                                                &-position
+                                                    margin-bottom: 30px
+                                                    p
+                                                        font-size: 24px
+                                                        line-height: 28px
+                                                        font-weight: $regular
+                                                        color: #F2F2F2
+                                                        margin: 0
+                                                &-button
+                                                    margin-bottom: 57px
+                                                    a
+                                                        // pointer-events: auto
+                                                        color: #fff
+                                                        padding: 18px 74px
+                                                        background-color: $brand_color
+                                                        line-height: 28px
+                                                        border-radius: 50px
+                                                        display: block
+                                        img:hover ~ .swiper-slide__description
+                                            display: flex                                            
+                                            opacity: 1
+                                            pointer-events: none
+                                            height: 100%
+                                            .description
+                                                &-button
+                                                    position: relative
+                                                    a
+                                                        pointer-events: auto
+                                                        // position: absolute
+                                                        // bottom: 20px
+                                                        // display: block
+                                                        // z-index: 20
+
+                                            // display: flex
+                                    
+                                    // width: 430px
+                                    // background-color: #575757
+                        .swiper-navigation
+                            display: flex
+                            align-items: flex-end
+                            width: 68%
+                            // max-width: 1780px
+                            .swiper-scrollbar
+                                // height: 10px
+                                height: 1px
+                                background-color: #676767
+                                width: 100%
+                                margin-top: 85px
+                                position: relative
+                                margin-bottom: 20px
+                                .swiper-scrollbar-drag
+                                    border-radius: 0
+                                    width: 230px
+                                    height: 7px
+                                    top: -3px
+                                    position: absolute
+                                    background: #17191D
+                                    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15)
+                            .swiper-buttons
+                                display: flex
+                                margin-left: 172px
+                                .swiper-button-prev, .swiper-button-next
+                                    position: static
+                                    top: 0
+                                    border-radius: 50%
+                                    width: 5px
+                                    border: 1px solid #DEDEDE
+                                    width: 50px
+                                    height: 50px
+                                    background-color: #F8F8F8
+                                    // height: 5px
+                                    margin-top: 0
+                                    z-index: auto
+                                    &:after
+                                        content: ""
+                                .swiper-button-next
+                                    margin-left: 30px
+                                .swiper-button-next i
+                                    // width: 17px
+                                    // height: 17px
+                                    position: relative
+                                    z-index: 1
+                                    display: inline-block
+                                    vertical-align: middle
+                                    width: 17px
+                                    height: 17px
+                                    margin-left: -10px                                    
+                                    &:before
+                                        content: ""
+                                        position: absolute
+                                        z-index: 1
+                                        top: 50%
+                                        right: -7px
+                                        transform: translateY(-50%) rotate(-45deg)
+                                        width: 10px
+                                        height: 10px
+                                        border-right: 2px solid #101020
+                                        border-bottom: 2px solid #101020
+                                    &:after
+                                        content: ""
+                                        position: absolute
+                                        top: 50%
+                                        left: 0                                        
+                                        transform: translateY(-50%)                                        
+                                        width: 24px
+                                        height: 2px
+                                        background-color: #101020
+                                .swiper-button-prev i
+                                    // width: 17px
+                                    // height: 17px
+                                    position: relative
+                                    z-index: 1
+                                    display: inline-block
+                                    vertical-align: middle
+                                    width: 17px
+                                    height: 17px
+                                    margin-left: 10px
+                                    transform: rotate(-180deg)                                    
+                                    &:before
+                                        content: ""
+                                        position: absolute
+                                        z-index: 1
+                                        top: 50%
+                                        right: -7px
+                                        transform: translateY(-50%) rotate(-45deg)
+                                        width: 10px
+                                        height: 10px
+                                        border-right: 2px solid #101020
+                                        border-bottom: 2px solid #101020
+                                    &:after
+                                        content: ""
+                                        position: absolute
+                                        top: 50%
+                                        left: 0                                        
+                                        transform: translateY(-50%)                                        
+                                        width: 24px
+                                        height: 2px
+                                        background-color: #101020
+.contactus
+    width: 100%
+    background-color: #F8F8F8
+    position: relative
+    padding: 120px 0 284px 0
+    z-index: 20
+    overflow: hidden
+    &-row        
+        .contactus-title
+            &__text
+                margin: 0
+                font-weight: $bold
+                font-size: 54px
+                line-height: 62px
+                color: $title_color
+    &-form
+        margin-top: 90px
+        width: 50%
+        form
+            display: flex
+            flex-wrap: wrap
+            .input
+                // width: 25%
+                flex: 0 0 calc(50% - 10px)
+                height: 64px
+                background: #FFFFFF
+                outline: none
+                border: none
+                box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15)
+                border-radius: 7px
+                padding-left: 21px
+                font-size: 20px
+                line-height: 23px
+                color: #101020
+                font-weight: $regular
+                margin-bottom: 20px
+                &::placeholder
+                    font-size: 20px
+                    line-height: 23px
+                    color: #585858
+                    font-family: $ubuntu
+                    font-weight: $light
+                &:nth-child(even)
+                    margin-left: 20px
+            .textarea
+                resize: none
+                flex: 0 0 100%
+                height: 222px
+                // height: 64px
+                background: #FFFFFF
+                outline: none
+                border: none
+                box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15)
+                border-radius: 7px
+                padding-left: 21px
+                padding-top: 20px
+                font-size: 20px
+                line-height: 23px
+                color: #101020
+                font-weight: $regular
+                // margin-bottom: 20px
+                font-family: $ubuntu
+                &::-webkit-scrollbar 
+                    width: 4px
+                &::-webkit-scrollbar-track 
+                    background: #fff
+                &::-webkit-scrollbar-thumb
+                    background: #ededed
+                    border-radius: 10px
+                &::placeholder
+                    font-size: 20px
+                    line-height: 23px
+                    color: #585858
+                    font-weight: $light
+                    font-family: $ubuntu
+            .input-buttons
+                margin-top: 34px
+                display: flex
+                justify-content: space-between
+                width: 100%
+            .file-input__input
+                width: 284px
+                height: 60px
+                opacity: 0
+                overflow: hidden
+                position: absolute
+                // z-index: -1
+            .file-input__label
+                cursor: pointer
+                display: inline-flex
+                align-items: center
+                border-radius: 7px
+                font-size: 14px
+                font-weight: 600
+                color: #101020                
+                font-size: 20px
+                line-height: 24px
+                font-weight: $regular
+                box-sizing: border-box
+                padding: 19px 24px
+                border: 1px solid #101020
+                // background-color: #4245a8
+                // box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25)
+            .file-input__label img
+                width: 20px
+                object-fit: contain
+                margin-right: 12px
+            .button-submit
+                button
+                    width: 284px
+                    height: 64px
+                    background: #101020
+                    border-radius: 36px
+                    font-weight: $regular
+                    font-size: 24px
+                    line-height: 28px
+                    text-align: center
+                    color: #FFFFFF
+                    font-family: $ubuntu
+                    transition: .5s linear
+    .contactus-decor-down
+        position: absolute
+        left: 20px
+        bottom: 20px
+        width: 423px
+        height: 140px
+    .contactus-decor-right
+        position: absolute
+        right: 0
+        top: 0
+        bottom: 0
+        z-index: -1
+        // left: 20px
+        // bottom: 20px
+        // width: 423px
+        // height: 140px
+.footer
+    background-color: #17191D
+    padding: 120px 0 132px 0
+    position: relative
+    overflow: hidden
+    // .footer-row
+    .footer-title
+        &__text
+            font-size: 54px
+            line-height: 63px
+            font-weight: $bold
+            color: #fff
+            text-transform: capitalize
+            margin: 0
+    .footer-row__sociales
+        display: flex
+        width: 70%
+        justify-content: space-between
+        .sociales-block
+            margin-top: 90px
+            display: block
+            &__header
+                h5
+                    font-size: 30px
+                    line-height: 35px
+                    font-weight: $bold
+                    color: #fff
+                    position: relative
+                    margin: 0
+                    &:before
+                        position: absolute
+                        content: ""
+                        top: 100%
+                        display: block
+                        height: 2px
+                        width: 130px
+                        background-color: #FF0B53
+            &__links
+                margin-top: 32px
+                .link-item
+                    display: flex
+                    align-items: center
+                    margin-bottom: 18px
+                    position: relative
+                    a
+                        font-size: 20px
+                        font-weight: $regular
+                        line-height: 23px
+                        color: #fff
+                        position: absolute
+                        left: 35px
+                        white-space: nowrap
+                        cursor: pointer
+                        transition: 0.5s linear
+                        &:hover
+                            color: #B1B1B1
+                            transition: 0.5s linear
+                    &:last-child
+                        margin-bottom: 0
+                .link-item__social
+                    a
+                        margin-right: 22px
+                .link-item__privacy
+                    margin-top: 34px
+                    a
+                        font-size: 18px
+                        line-height: 21px
+                        font-weight: $regular
+                        color: #B1B1B1
+                        transition: 0.5s linear
+                        &:hover
+                            color: #fff
+                            transition: 0.5s linear
+    .footer-decor
+        position: absolute
+        right: 70px
+        top: 74px
+
+
+.contactus-form form .file-input__label
+    &:hover
+        background: #fff
+.contactus-form form .button-submit button
+    &:hover
+        background: $brand_color
+        transition: .5s linear
+        border: none
+        box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.15)
+            
+                          
+
+
+
+                                
+                                                            
+.popup-wrapper
+  position: fixed
+  z-index: 1000
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  left: -100%
+  transition-delay: 0.3s
+  -webkit-transition-delay: 0.3s
+
+  .bg-layer
+    position: absolute
+    left: 0
+    top: -100px
+    right: 0
+    bottom: -100px
+    // background: rgba(18, 34, 35, 0.75)
+    background: rgba(0, 0, 0, 0.63)
+    transition: all 0.3s ease-in-out
+    -webkit-transition: all 0.3s ease-in-out
+    opacity: 0
+
+  &.active
+    left: 0
+    transition-delay: 0s
+    -webkit-transition-delay: 0s
+
+    .bg-layer
+      opacity: 1
+
+.popup-content
+  position: absolute
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  overflow: auto
+  -webkit-overflow-scrolling: touch
+  font-size: 0
+  text-align: center
+  transition: all 0.3s ease-out
+  -webkit-transition: all 0.3s ease-out
+  transform: translateY(100px)
+  -webkit-transform: translateY(100px)
+  opacity: 0
+  visibility: hidden
+
+  &:after
+    display: inline-block
+    vertical-align: middle
+    height: 100%
+    content: ""
+
+  &.active
+    transform: translateY(0)
+    -webkit-transform: translateY(0)
+    opacity: 1
+    visibility: visible
+
+  .layer-close
+    position: absolute
+    left: 0
+    bottom: 0
+    right: 0
+    height: 10000px
+
+.popup-container
+  position: relative
+  overflow: visible
+  padding: 20px
+  z-index: 1
+  display: inline-block
+  vertical-align: middle
+  border-radius: 10px
+  width: 100%
+  max-width: 724px
+  min-height: 50vh
+  background: #fff
+//   height: auto
+
+  .modal-video
+    width: 100%
+    height: 560px
+
+  .modal-text
+    color: #000000
+    font-family: "Gilda Display", sans-serif
+    font-size: 35px
+    letter-spacing: 0
+    line-height: 26.56px
+    text-align: center
+    margin-top: 75px
+
+  .modal-title
+    font-family: 'Atkinson Hyperlegible', sans-serif
+    font-size: 24px
+    line-height: 1.25em
+    font-weight: 400
+    color: var(--clr-black)
+    max-width: 850px
+    margin-bottom: 30px
+
+  .modal-sub-title
+    color: #000000
+    font-size: 25px
+    letter-spacing: 0.63px
+    line-height: 30px
+    margin-bottom: 20px
+
+  .modal-text
+    color: #000000
+    font-family: "Gilda Display", sans-serif
+    font-size: 22px
+    letter-spacing: 0
+    line-height: 29px
+
+.btn-close
+    position: absolute
+    cursor: pointer
+    z-index: 1
+    top: -12px
+    right: -12px
+    background-color: #fff
+    width: 36px
+    height: 36px
+    display: flex
+    justify-content: center
+    align-items: center
+
+    // padding: 11px
+    border: 1px solid #DEDEDE
+    border-radius: 50%
+    -webkit-transition: all 0.3s ease-out
+    transition: all 0.3s ease-out
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15)
+@media (min-width: 1200px)
+    .btn-close:hover span
+        transform: scale(0.9)
+.btn-close span
+    position: relative
+    display: block
+    width: 12px
+    height: 12px
+    transition: .3s all ease
+.btn-close span:before, .btn-close span:after
+    content: ""
+    position: absolute
+    top: 50%
+    left: 50%
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg)
+    transform: translate(-50%, -50%) rotate(-45deg)
+    display: block
+    width: 100%
+    height: 2px
+    -webkit-transition: all 0.3s ease-out
+    transition: all 0.3s ease-out
+    background: #09121F
+.btn-close span:after
+    transform: translate(-50%, -50%) rotate(45deg)
+/* .popup-link{
+ *  
+ *}
+
+.popup-align
+  position: relative
+//   padding: 60px 100px 50px 100px
+//   padding: 20px
+  text-align: left
+
+.simple-item
+    &__header
+        display: flex
+        .simple-image
+            img
+                width: 271px
+                object-fit: contain
+        .simple-header
+            &__name
+                display: flex
+                align-items: center
+                margin-left: 20px
+                position: relative
+                margin-bottom: 26px
+                p
+                    color: #585858
+                    font-size: 20px
+                    font-weight: $regular
+                    line-height: 23px
+                    margin: 0
+                span
+                    color: #2C2C2C
+                    font-size: 20px
+                    font-weight: $light
+                    line-height: 23px
+                    padding: 7px 10px
+                    background-color: #F4F4F4
+                    border-radius: 7px
+                    position: absolute
+                    display: block
+                    // top: 0
+                    left: 105px
+                    white-space: nowrap
+                .simple-links
+                    display: flex
+                    padding: 0 14px
+                    height: 40px
+                    background-color: #F4F4F4
+                    align-items: center
+                    border-radius: 7px
+                    margin-bottom: 0
+                    a
+                        margin-right: 18px
+                        &:last-child
+                            margin-right: 0
+                &:last-child
+                    margin-bottom: 0                         
+
+                            // width: 20px
+    &__description
+        margin-top: 20px
+        p
+            font-weight: $light
+            font-size: 20px
+            line-height: 29px
+            margin: 0
+            text-align: left
+
+
+
+// @media (max-width: 1199px)
+//   .popup-container .modal-title
+//     max-width: 90%
+
+//   .popup-align
+//     padding: 50px 70px
+
+// @media (max-width: 991px)
+//   .popup-container
+//     .modal-video
+//       height: 415px
+
+//     .modal-title
+//       font-size: 20px
+//       margin-bottom: 20px
+
+//   .popup-align
+//     padding: 50px 30px
+
+// @media (max-width: 576px)
+//   .popup-container .modal-video
+//     height: 180px

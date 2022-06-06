@@ -1,0 +1,615 @@
+@import 'vars'
+@media screen and (max-width: 1640px)
+    .header
+        &-row
+            &__navigation
+                .navigation-menu
+                    &__item
+                        margin-left: 30px
+            &__social
+                .social-phone
+                    margin-left: 30px
+                .social-language
+                    margin-left: 50px
+    .decor-close
+        width: 160px
+        height: 160px
+        right: 40px
+    .decor-circle-border
+        width: 800px
+        height: 800px
+        border: 100px solid $brand_color
+    .decor-circle
+        width: 180px
+        height: 180px
+    .banner
+        &-row
+            
+            
+            // transform: translateY(-24%) translateX(-50%)
+            // margin-left: 20px
+            // margin-right: 20px
+            // padding: 0 20px
+            
+            // box-sizing: border-box
+            .banner-description
+                // width: calc(100% - 400px)
+                max-width: 70vw
+                padding: 46px
+                .banner-title
+                    .title__text
+                        font-size: 60px
+                .banner-description
+                    max-width: 100%
+                    padding: 0 80px
+                    .description__text
+                        font-size: 20px
+                .banner-buttons
+                    margin-top: 50px
+                    button
+                        width: 220px
+                        height: 54px
+                        font-size: 20px
+        // .banner-top
+        //     .banner-row
+        //         &__title
+        //             .title-header
+        //                 font-size: 60px
+        //                 letter-spacing: .1em
+        //                 line-height: 80px
+        //         &__image
+        //             height: 600px
+    
+            // .team-tabs
+            //     &-header
+            //         max-width: 50%
+    .partners
+        &-row
+            .partners-title
+                &__text
+                    font-size: 40px
+            .partners-tabs
+                &-header
+                    max-width: 50%
+    .team
+        .team-block
+            .team-row
+                .team-title
+                    &__text
+                        font-size: 40px
+            .team-row
+                .team-gallery
+                    .team-gallery__description
+                        .description-title__header
+                            font-size: 24px
+                            line-height: 28px
+                        .description-text__item
+                            font-size: 18px
+                            line-height: 24px
+                    .team-gallery__content
+                        .content-tabs
+                            display: flex
+                            margin-bottom: 50px
+                            // justify-content: center
+                            &__block
+                                background-color: #F0F0F0
+                                display: flex
+                                border-radius: 60px
+                                .content-tabs__item
+                                    position: relative
+                                    // padding-left: 35px
+                                    padding: 10px 33px 10px 68px
+                                    display: block
+
+                                    cursor: pointer
+                                    border-radius: 60px
+                                    font-size: 18px
+                                    line-height: 20px
+                                    font-weight: $medium
+                                    &:first-child
+                                        .checkmark
+                                            &:after
+                                                content: ""
+                                                position: absolute
+                                                display: block
+                                                top: 2px
+                                                left: 2px
+                                                width: 10px
+                                                height: 10px
+                                                border-radius: 50%
+                                                background: white
+                                    input
+                                        position: absolute
+                                        opacity: 0
+                                        cursor: pointer
+                                        height: 0
+                                        width: 0
+
+                                        /* Create a custom radio button
+
+                                    .checkmark
+                                        position: absolute
+                                        // top: 0
+                                        left: 30px
+                                        height: 20px
+                                        width: 20px
+                                        border: 3px solid #09121F                    
+                                        border-radius: 50%
+                        .content-swiper
+                            .swiper
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        max-width: 360px
+    .contactus
+        .contactus-row
+            .contactus-title
+                &__text
+                    font-size: 40px
+    .footer
+        .footer-title
+            &__text
+                font-size: 40px
+                
+
+@media screen and (max-width: 1400px)
+    .team .team-block .team-row .team-gallery__content .content-swiper .swiper-navigation
+        width: 60%
+    .team .team-block .team-row .team-gallery__content .content-swiper .swiper-navigation .swiper-buttons
+        margin-left: 100px
+    .footer .footer-row__sociales
+        width: 80%
+        flex-wrap: wrap
+
+@media screen and (max-width: 1280px)
+    .header
+        &-row
+            &__navigation
+                .navigation-menu
+                    &__item
+                        margin-left: 20px
+            &__social
+                .social-phone
+                    margin-left: 30px
+                .social-language
+                    margin-left: 30px
+                .social-networks
+                    margin-left: 20px
+    .team .team-block .team-row .team-gallery .team-gallery__content .content-swiper .swiper .swiper-wrapper .swiper-slide
+        max-width: 300px
+    .team .team-block .team-row .team-gallery__content .content-swiper .swiper-navigation
+        width: 52%
+    .contactus-form
+        width: 100%
+    .footer .footer-row__sociales .sociales-block
+        flex: 0 0 50%
+    .footer .footer-decor
+        bottom: 74px
+        top: auto
+
+@media screen and (max-width: 1100px)
+    .partners
+        &-row
+            .partners-title
+                &__text
+                    font-size: 40px
+            .partners-tabs
+                display: flex
+                flex-direction: column
+                &-header
+                    max-width: 100%
+                    margin-bottom: 50px
+                    margin-right: 0
+                &-buttons
+                    display: flex
+                    // justify-content: space-between
+                    .tablink
+                        box-sizing: border-box
+                        flex: 0 0 calc(33.333% - 14px)
+
+                                    
+
+                
+
+@media screen and (max-width: 991px)
+    .decor-line1
+        width: 40vw
+    .decor-line2
+        width: 60vw
+    .header
+        // transition: .5s
+        // transform: translateX(-100%)
+        
+        &-row
+            flex-direction: column
+            justify-content: space-between
+            height: 100%
+            &__logo
+                width: 100%
+            &__navigation
+                width: 100%
+                height: 0
+                transform: translateX(-100%)
+                transition: transform 0.5s
+                .navigation-menu
+                    margin-top: 74px
+                    flex-direction: column
+                    &__item
+                        margin: 15px 0
+                        text-align: center
+                        .item-link
+                            font-size: 24px
+                            line-height: 28px
+                    
+            &__social
+                width: 100%
+                // display: flex
+                flex-direction: column
+                align-items: center
+                
+        .header-row__menu
+            display: block
+            position: absolute
+            right: 20px
+            top: 40px
+    .banner
+        .banner-top
+            .banner-row
+                &__title
+                    .title-header
+                        font-size: 50px
+                        letter-spacing: .1em
+                        line-height: 70px
+                &__image
+                    margin-top: 100px
+                    height: 400px
+        .banner-button
+            display: none
+    .services
+        margin-top: 0
+        padding: 0
+    .team .team-block .team-row .team-gallery
+        flex-direction: column
+    .team .team-block .team-row .team-gallery__description
+        margin-top: 30px
+        // text-align: center
+    .team .team-block .team-row .team-gallery .team-gallery__content .content-tabs
+        justify-content: center
+        margin-top: 40px
+        margin-bottom: 40px
+        padding-right: 20px
+    .team .team-block .team-row .team-gallery__content .content-swiper .swiper-navigation
+        width: 100%
+        padding-right: 20px
+    .team .decor-close-border2
+        display: none
+    .team .team-block .team-row .team-gallery .team-gallery__content .content-swiper .swiper .swiper-wrapper .swiper-slide
+        max-width: 335px
+    .team .swiper
+        margin-left: -40px
+    .team .team-block .team-row .team-gallery__content .content-swiper .swiper .swiper-wrapper .swiper-slide__item .swiper-slide__description .description-author h5
+        font-size: 24px
+        line-height: 28px
+    .team .team-block .team-row .team-gallery__content .content-swiper .swiper .swiper-wrapper .swiper-slide__item .swiper-slide__description .description-position
+        margin-bottom: 20px
+    .team .team-block .team-row .team-gallery__content .content-swiper .swiper .swiper-wrapper .swiper-slide__item .swiper-slide__description .description-position p
+        font-size: 20px
+        line-height: 33px
+    .team .team-block .team-row .team-gallery__content .content-swiper .swiper .swiper-wrapper .swiper-slide__item .swiper-slide__description .description-button a
+        padding: 17px 67px
+    .team .team-block .team-row .team-gallery__content .content-swiper .swiper .swiper-wrapper .swiper-slide__item .swiper-slide__description .description-button
+        margin-bottom: 32px
+    .footer .footer-row__sociales .sociales-block
+        flex: 0 0 100%
+
+
+
+@media screen and (max-width: 860px)
+    .decor-circle-border
+        width: 500px
+        height: 500px
+        border: 80px solid $brand_color
+    .banner
+        &-row
+            .banner-description
+                .banner-buttons
+                    width: 100%
+                    button
+                        width: 100%
+                        height: 60px
+                    .button-read-more
+                        margin-left: 0
+                        margin-top: 30px
+                .banner-title
+                    .title__text
+                        font-size: 34px
+                        line-height: 39px
+                .banner-description__block
+                    .description__text
+                        font-size: 16px
+                        line-height: 20px
+@media screen and (max-width: 780px)
+    .partners
+        padding: 50px 0
+        &-row
+            .partners-title
+                &__text
+                    font-size: 24px
+            .partners-tabs
+                display: flex
+                flex-direction: column
+                margin-top: 30px
+                &-header
+                    max-width: 100%
+                    margin-bottom: 30px
+                    margin-right: 0
+                    .tabcontent
+                        &__header
+                            .tab-title
+                                &__image
+                                    img
+                                        width: 40px
+                                        height: 40px
+                                &__header
+                                    &-author
+                                        font-size: 20px
+                                        line-height: 23px
+                                    &-position
+                                        font-size: 16px
+                                        line-height: 18px
+                            .tab-description
+                                margin-top: 20px
+                                &__text
+                                    font-size: 16px
+                                    line-height: 22px
+                &-buttons
+                    display: flex
+                    // justify-content: space-between
+                    .tablink
+                        box-sizing: border-box
+                        flex: 0 0 calc(50% - 8px)
+                        height: 120px
+                        margin-right: 16px
+                        
+                        &:nth-child(odd)
+                            margin-right: 16px
+                            margin-bottom: 16px
+                        &:nth-child(even)
+                            margin-right: 0
+                            margin-bottom: 16px
+                        &:nth-child(5)
+                            margin-bottom: 0
+                        &:nth-child(6)
+                            margin-bottom: 0
+                        &-image
+                            width: 70%
+    .team
+        padding: 50px 0
+        .decor-close-border
+            width: 63px
+            height: 63px
+            top: 10%
+        .team-block .team-row .team-title__text
+            font-size: 24px
+            font-weight: 28px
+        .team-block .team-row .team-gallery .team-gallery__description .description-title__header
+            font-size: 20px
+            line-height: 23px
+        .team-block .team-row .team-gallery .team-gallery__description .description-text__item
+            font-size: 16px
+            line-height: 24px
+    .simple-item__header
+        flex-direction: column
+        align-items: flex-start
+    .popup-container
+        padding: 10px
+    .popup-align
+        padding: 0
+    .simple-item__header .simple-header__name
+        margin-left: 0
+    .simple-header
+        margin-top: 27px
+    .popup-container
+        max-width: 90vw
+    .contactus-form form .input
+        flex: 0 0 100%
+        &:nth-child(even)
+            margin-left: 0        
+    .contactus
+        overflow: hidden
+        padding: 50px 0
+    .contactus .contactus-decor-right
+        left: 40%
+        opacity: .6
+    .contactus .contactus-decor-down
+        display: none
+    .contactus .contactus-row .contactus-title__text
+        font-size: 24px
+    .contactus-form
+        margin-top: 22px
+    .contactus-form form .input, .contactus-form form .textarea
+        padding-left: 16px
+        height: 50px
+        font-size: 16px
+        line-height: 19px
+        &::placeholder
+            font-size: 16px
+            line-height: 19px
+    .contactus-form form .textarea
+        padding-top: 16px
+        height: 193px
+    .footer .footer-title__text
+        font-size: 24px
+    .footer .footer-row__sociales .sociales-block__header h5
+        font-size: 20px
+        line-height: 23px
+        &:before
+            width: 90px
+    .footer
+        padding: 50px 0
+    .footer .footer-row__sociales .sociales-block
+        margin-top: 30px
+    .footer .footer-row__sociales .sociales-block__links .link-item a
+        font-size: 16px
+        line-height: 19px
+    .footer .footer-row__sociales .sociales-block__links .link-item
+        margin-bottom: 15px
+    .footer .footer-row__sociales .sociales-block__links
+        margin-top: 20px
+    .footer .footer-row__sociales .sociales-block__links .link-item__social a
+        margin-right: 17px
+    .footer .footer-row__sociales .sociales-block__links .link-item__privacy
+        margin-top: 23px
+    .footer .footer-row__sociales .sociales-block__links .link-item__privacy a
+        font-size: 16px
+        line-height: 19px
+
+                        
+    
+
+@media screen and (max-width: 580px)
+    .header
+        &-row
+            &__navigation
+                .navigation-menu__item
+                    text-align: left
+    .banner
+        &-row
+            width: 100%
+            .banner-description
+                max-width: calc(100vw - 40px)
+                padding: 56px 15px
+    .decor-line2
+        bottom: 30%
+    .decor-close-border
+        display: none
+    .decor-circle-border
+        width: 315px
+        height: 315px
+        border: 50px solid $brand_color
+        top: 90%
+    .partners
+        &-row
+            .partners-tabs                
+                &-buttons                    
+                    .tablink                        
+                        height: 100px                     
+                        
+                        &-image
+                            width: 60%
+                            // height: 70%
+    .team .team-block .team-row .team-gallery__content .content-swiper .swiper-navigation .swiper-buttons
+        display: none
+    .team .team-block .team-row .team-gallery__content .content-swiper .swiper-navigation .swiper-scrollbar
+        margin-top: 44px
+    .team .decor-close-border
+        display: block
+    .team .decor-close-border2
+        display: none
+    .team .team-block .team-row .team-gallery .team-gallery__content .content-tabs__block .content-tabs__item
+        padding: 8px 10px 8px 40px
+    .team .team-block .team-row .team-gallery .team-gallery__content .content-tabs__block .content-tabs__item .checkmark
+        left: 12px
+    .team .team-block .team-row .team-gallery__description
+        min-width: calc(100% - 20px)
+    .simple-item__header .simple-image img
+        width: 102px
+    .btn-close
+        top: 10px
+        right: 10px
+    .simple-item__header .simple-header__name p
+        font-size: 16px
+        line-height: 19px
+    .simple-item__header .simple-header__name span
+        font-size: 16px
+        line-height: 19px
+        padding: 7px 10px
+    .simple-item__header .simple-header__name .simple-links a
+        margin-right: 15px
+    .simple-item__header .simple-header__name .simple-links
+        height: 34px
+        padding: 0 10px
+    .simple-item__header .simple-header__name .simple-links a img
+        width: 20px
+    .simple-item__description p
+        font-size: 16px
+        line-height: 24px
+        // margin-right: 0
+    .contactus-form form .input-buttons
+        flex-direction: column
+    .contactus-form form .file-input__input
+        width: 100%
+    .contactus-form form .file-input__label
+        width: 100%
+        justify-content: center
+        margin-bottom: 40px
+        padding: 14px 
+    .contactus-form form .input-buttons
+        display: flex
+        justify-content: center
+        // height: 60px
+    .contactus-form form .input-buttons
+        margin-top: 20px
+    .contactus-form form .button-submit button
+        height: 60px
+        font-size: 20px
+        line-height: 23px
+    .footer .footer-decor
+        display: none
+    .footer .footer-row__sociales
+        width: 100%
+    .contactus-form form .input-buttons .button-submit
+        display: flex
+        justify-content: center
+
+
+    
+@media screen and (max-width: 460px)
+    .banner
+        .banner-top
+            .banner-row                
+                &__brand
+                    svg
+                        .text--line
+                            font-size: 60px
+                &__title
+                    .title-header
+                        font-size: 30px
+                        letter-spacing: .1em
+                        line-height: 50px
+                        br
+                            display: none
+                &__image
+                    margin-top: 70px
+                    height: 300px
+    
+    .services
+        margin-top: -30px
+        &-container
+            .services-row
+                .services-block
+                    min-width: 100%
+                    height: 360px
+                    &__description
+                        .services-block
+                            &__image
+                                padding-top: 60%
+
+@media screen and (max-width: 400px)  
+    .services
+        margin-top: 10px
+        &-container
+            .services-row
+                .services-block
+                    min-width: 100%
+                    height: 340px
+                    &:before
+                        width: 300px
+                        height: 300px
+                    &:nth-child(odd)
+                        margin-right: 0
+                    &__description
+                        .services-block
+                            &__title, &__link
+                                padding-left: 20px
+                            &__image
+                                padding-top: 75%
